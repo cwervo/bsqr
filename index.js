@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 let qrcode = require('qrcode-terminal');
 let bs = require("browser-sync").create();
 let devip = require('dev-ip');
