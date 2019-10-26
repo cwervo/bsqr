@@ -9,12 +9,12 @@ const program = new commander.Command();
 
 program
     .option('-p, --port <number>', 'port', 3000)
-  .option('-ns, --no-server', 'Stop the server from running')
-  .option('-s, --server <path>', 'Run a Local server (uses your cwd as the web root) [BrowserSync Option]', '.')
-  .option('-sm, --small', 'output extra debugging')
+    .option('-ns, --no-server', 'Stop the server from running')
+    .option('-s, --server <path>', 'Run a Local server (uses your cwd as the web root) [BrowserSync Option]', '.')
+    .option('-sm, --small', 'output extra debugging')
 
 program.parse(process.argv)
-// .init starts the server
+
 let browserSyncOptions = {}
 if (program.noServer == undefined) {
     browserSyncOptions
