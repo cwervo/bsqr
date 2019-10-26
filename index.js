@@ -14,8 +14,6 @@ program
   .option('-sm, --small', 'output extra debugging')
 
 program.parse(process.argv)
-console.log(program.opts());
-
 // .init starts the server
 let browserSyncOptions = {}
 if (program.noServer == undefined) {
@@ -28,6 +26,5 @@ bs.init(browserSyncOptions)
 // qrcode.setErrorLevel('Q');
 const externalURL = `http://${devip()[0]}:${program.port}`
 qrcode.generate(externalURL, {small: true});
-console.log(externalURL)
 
 bs.reload("*");
