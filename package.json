@@ -1,34 +1,34 @@
 {
-  "name": "bsqr",
-  "version": "0.0.2",
-  "description": "A simple Browser Sync server that shows its external QR code.",
-  "main": "index.js",
-  "directories": {
-    "example": "examples"
-  },
-  "scripts": {
-    "bsqr": "./index.js",
-    "test": "echo \"no tests yet\""
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cwervo/bsqr.git"
-  },
-  "keywords": [
-    "browsersync",
-    "server",
-    "qr",
-    "code"
-  ],
-  "author": "Andrés Cuervo",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/cwervo/bsqr/issues"
-  },
-  "homepage": "https://github.com/cwervo/bsqr#readme",
-  "dependencies": {
-    "browser-sync": "^2.26.7",
-    "commander": "^3.0.2",
-    "qrcode-terminal": "^0.12.0"
-  }
+    "name": "bsqr",
+    "version": "0.0.2",
+    "description": "A simple Browser Sync server that shows its external QR code.",
+    "main": "index.js",
+    "directories": {
+        "example": "examples"
+    },
+    "scripts": {
+        "test": "echo \"no tests yet\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cwervo/bsqr.git"
+    },
+    "keywords": [
+        "browsersync",
+        "server",
+        "qr",
+        "code"
+    ],
+    "author": "Andrés Cuervo",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/cwervo/bsqr/issues"
+    },
+    "homepage": "https://github.com/cwervo/bsqr#readme",
+    "dependencies": {
+        "browser-sync": "^2.26.7",
+        "commander": "^3.0.2",
+        "qrcode-terminal": "^0.12.0"
+    },
+    "bin": "./index.js"
 }
