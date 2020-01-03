@@ -11,20 +11,19 @@ program
     .option('-p, --port <number>', 'port', 3000)
     .option('-ns, --no-server', 'Stop the server from running')
     .option('-s, --server <path>', 'Run a Local server (uses your cwd as the web root) [BrowserSync Option]', '.')
-    .option('-sm, --small', 'output extra debugging')
+    .option('-b, --big', 'Use a big QR code')
 
 program.parse(process.argv)
 // .init starts the server
 let browserSyncOptions = {}
 if (program.noServer == undefined) {
-    browserSyncOptions
-        .server = (program.server == true) ? '.' : program.server
+    browserSyncOptions.server = (program.server == true) ? '.' : program.server
+    browserSyncOptions.port = program.port
+
+    bs.init(browserSyncOptions)
 }
 
-bs.init(browserSyncOptions)
-
-// qrcode.setErrorLevel('Q');
 const externalURL = `http://${devip()[0]}:${program.port}`
-qrcode.generate(externalURL, {small: true});
+qrcode.generate(externalURL, {small: !program.big});
 
-bs.reload("*");
+if (program.noServer == undefined) bs.reload("*");
